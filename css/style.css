@@ -1,0 +1,336 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header{
+    width:100%;
+    height: 100vh;
+    position: relative;
+    background-color: #abdcd6;
+} 
+
+header:before{
+    content: '';
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height: 100vh;
+}
+
+.fluid {
+    margin: 40px 80px;
+    width:40vh;/*横幅*/
+    height: 40vh;/*縦幅*/
+    background:#fff987;/*背景色*/
+    animation: fluidrotate 30s ease 0s infinite;/*アニメーションの設定*/
+}
+@keyframes fluidrotate {  
+  0%, 100% {
+      border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
+  14% {
+      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;}
+  28% {
+      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;}
+  42% {
+      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;}
+  56% {
+      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;}
+  70% {
+      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;}
+  84% {
+      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;}
+}
+
+.fluid2 {
+  margin: 200px 500px;
+  width:40vh;/*横幅*/
+  height: 40vh;/*縦幅*/
+  background:#a5c4f1;/*背景色*/
+  animation: fluidrotate 30s ease 0s infinite;/*アニメーションの設定*/
+}
+@keyframes fluid2rotate {  
+0%, 100% {
+    border-radius: 38% 62% 70% 30% / 30% 42% 58% 70% ;}
+14% {
+    border-radius: 31% 69% 46% 54% / 43% 29% 71% 57%;}
+28% {
+    border-radius: 13% 87% 27% 73% / 59% 17% 83% 41%;}
+42% {
+    border-radius: 81% 19% 77% 23% / 45% 38% 62% 55%;}
+56% {
+    border-radius: 53% 47% 77% 23% / 76% 75% 25% 24%;}
+70% {
+    border-radius: 13% 87% 16% 84% / 40% 75% 25% 60%;}
+84% {
+    border-radius: 23% 77% 71% 29% / 77% 37% 63% 23%;}
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color:#eb593c;
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Ultra', serif;
+}
+
+/*矢印が右に移動する*/
+.btnarrow4{
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  color: #eb593c;
+  text-decoration: none;
+  outline: none;
+  top: 10px;
+  font-size: 1.5rem;
+}
+
+/*矢印と下線の形状*/
+.btnarrow4::before{
+  content: '';
+  position: absolute;
+  bottom:-8px;
+  left:15%;
+  width: 85%;
+  height: 1px;
+  background:#eb593c;
+  transition: all .3s;
+}
+
+.btnarrow4::after{
+  content: '';
+  position: absolute;
+  bottom:-3px;
+  right:0;
+  width: 15px;
+  height:1px;
+  background:#eb593c;
+  transform: rotate(35deg);
+  transition: all .3s;
+}
+
+/*hoverした際の移動*/
+.btnarrow4:hover::before{
+  left:20%;
+}
+
+.btnarrow4:hover::after{
+  right:-5%;
+}
+
+/*スクロールダウン全体の場所*/
+.scrolldown2{
+	position:absolute;
+	bottom:50px;
+	left:50%;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span{
+	position: absolute;
+	left:10px;
+	bottom:20px;
+	color: #333333;
+	font-size: 0.7rem;
+	letter-spacing: 0.05em;
+	/*縦書き設定*/
+	-ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left:-4px;
+    /*丸の形状*/
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+	background:#333333;
+    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+	animation:
+		circlemove 1.6s ease-in-out infinite,
+		cirlemovehide 1.6s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove{
+      0%{bottom:75px;}
+     100%{bottom:-5px;}
+ }
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide{
+      0%{opacity:0}
+     50%{opacity:1;}
+    80%{opacity:0.9;}
+	100%{opacity:0;}
+ }
+
+/* 線の描写 */
+.scrolldown2:after{
+	content:"";
+	position: absolute;
+	bottom:0;
+	left:0;
+	width:2px;
+	height: 80px;
+	background:#333333;
+}
+
+footer {
+    text-align: center;
+    background: #fffcec;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #333333;
+}
+
+main {
+  position: relative;
+  z-index:1;
+  padding:100px 0;
+  text-align: center;
+  background-color: #fffcec;
+}
+
+main::before {
+    content: "";
+    width: 100%;
+    height: auto;
+    background-color: red
+}
+
+.original {
+  margin: auto;
+  max-width: 800px;
+  padding: 2px;
+}
+
+.original ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+    margin: 10%;
+}
+
+.original img:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.original p {
+  text-decoration: none;
+  margin: 2% 0;
+  color: #333333;
+}
+
+.original a {
+  text-decoration: none;
+}
+
+/* @media screen and (max-width: 640px) { */
+  /* ul { */
+    /* grid-template-columns: 1fr 1fr; */
+  /* } */
+/* } */
+
+/*ローディング画面*/
+#loading {
+    transition: all 3s; /*ローディングにかかる時間*/
+    background-color: #abdcd6;
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+  }
+  
+  
+  .spinner {
+    margin: 120px auto 0;
+    width: 100px;
+    text-align: center;
+  }
+  
+  .spinner > div {
+    width: 25px;
+    height: 25px;
+    background-color: #333333;
+  
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 40% { 
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+    }
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+  }
+  
+  @keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }
+  
+  .loaded {
+    opacity: 0;
+    visibility: hidden;
+  }

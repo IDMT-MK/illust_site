@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  background: #fffcec;
+  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #333333;
+}
+
+main {
+padding:10px 0 0 0;
+text-align: center;
+background-color: #fffcec;
+}
+
+/*矢印が右に移動する*/
+.btnarrow4{
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  color: #eb593c;
+  text-decoration: none;
+  outline: none;
+  margin: 15% 0 0 70%;
+  font-size: 1.5rem;
+}
+
+/*矢印と下線の形状*/
+.btnarrow4::before{
+  content: '';
+  position: absolute;
+  bottom:-8px;
+  left:15%;
+  width: 85%;
+  height: 1px;
+  background:#eb593c;
+  transition: all .3s;
+}
+
+.btnarrow4::after{
+  content: '';
+  position: absolute;
+  bottom:-3px;
+  right:0;
+  width: 15px;
+  height:1px;
+  background:#eb593c;
+  transform: rotate(35deg);
+  transition: all .3s;
+}
+
+/*hoverした際の移動*/
+.btnarrow4:hover::before{
+  left:20%;
+}
+
+.btnarrow4:hover::after{
+  right:-5%;
+}
+
+#gallery {
+  display: grid;
+  max-width: 700px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+}
+
+.img-item {
+  opacity: 0;
+  filter: blur(10px);
+  width: 100%;
+}
+
+.img-item img {
+  width: 100%;
+  height: auto;
+}
+
+.original {
+  margin: 15% 0 0;
+}
+
+h1 {
+  font-size: 3rem;
+  padding: 50px;
+  color: #333333;
+}
+
+.original img {
+  width: 50%;
+  height: auto;
+}
+
+
