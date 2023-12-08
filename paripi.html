@@ -8,9 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
   <title>Photo Gallery</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" href="css/paripi.css">
-  <script src="js/paripi.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/paripi.js" defer></script>
 </head>
 
 <body>
@@ -24,8 +26,17 @@
         </div>
     </div>
 
+    <header>
+      <ul class="gnavi">
+        <li><a href="index.html">Home</a></li>
+        <li class="current"><a href="#">Gallery</a></li><!--現在地にはcurrentクラスを付ける-->
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+
   <main>
-    <div id="gallery">
+    <div id="gallery1">
           <div class="img-item"><img src="images/paripi00.jpg" alt="img01"  class="thumb" data-image="images/img01.png"></div>
           <div class="img-item"><img src="images/paripi01.jpg" alt="img02"  class="thumb" data-image="images/img02.png"></div>
           <div class="img-item"><img src="images/paripi02.jpg" alt="img03"  class="thumb" data-image="images/img03.png"></div>
@@ -41,13 +52,23 @@
         </ul>
     </div>
 
+    <h1>TITELE</h1>
+    
     <div class="original">
-        <h1>TITLE</h1>
-        <img class="photo" src="images/paripi.jpg">
-    </div>
+    <ul class="gallery">
+      <li><img src="images/paripi.jpg" alt=""></li>
+      <li><img src="images/omu.png" alt=""></li>
+      <li><img src="images/peta.PNG" alt=""></li>
+      </ul>
+      <ul class="choice-btn">
+        <li><img src="images/paripi.jpg" alt=""></li>
+        <li><img src="images/omu.png" alt=""></li>
+        <li><img src="images/peta.PNG" alt=""></li>
+    </ul>
+  </div>
 
     <div class="topbotton">
-      <a href="index.html" class="btnarrow4">TOP</a>
+      <a href="index.html" class="btnarrow4">Home</a>
    </header>
 
   </main>
