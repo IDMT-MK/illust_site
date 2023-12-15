@@ -1,6 +1,9 @@
 // JavaScript
 
 const items = document.querySelectorAll('.img-item');
+const thumbs = document.querySelectorAll('.thumb');
+const main = document.querySelector('#main-image');
+const text = document.querySelector('#caption');
 
 // console.log(items);
 // console.log(items.length);
@@ -60,3 +63,9 @@ $('.choice-btn').slick({
 	nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
 	asNavFor: '.gallery', //連動させるスライドショーのクラス名
 });
+
+document.getElementById("choice-btn").onclick = function() {
+    document.getElementById("caption").innerHTML = "オムライス"
+    }
+
+  

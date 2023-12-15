@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,200;1,200&family=Ultra&display=swap" rel="stylesheet">
+  
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <script src="js/contact.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ローディング画面 -->
+    <div id="loading">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+             <div class="bounce3"></div>
+        </div>
+    </div>
+
+  <header>
+    <ul class="gnavi">
+      <li><a href="index.html">Home</a></li><!--現在地にはcurrentクラスを付ける-->
+      <li><a href="profile.html">Profile</a></li>
+      <li class="current"><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- 
+contact form created for treehouse competition.
+-->
+<div class="contact">
+  <div class="formscontact">
+    <div class="forms">
+      <div class="formshead">
+        <h2>CONTACT ME</h2>
+      </div>
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeMIuklSwjugyobg5pdwl5AVKxF_9vwXbNlhMWb4cQUw-yQZg/formResponse?embedded=true"
+        method="post">
+        <input type="text" name="entry.1096468454" placeholder="name" required="required" /><br />
+        <input type="email" name="entry.1338142923" placeholder="mail address" required="required" /><br />
+        <textarea type="text" name="entry.635372125" placeholder="message" required="required"></textarea><br />
+        <div class="message">Message Sent</div>
+        <button id="submit" type="submit">
+          send!
+        </button>
+      </form>
+    </div>
+    <!--<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeMIuklSwjugyobg5pdwl5AVKxF_9vwXbNlhMWb4cQUw-yQZg/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>!-->
+  </div>
+</div>
+
+  <div class="topbotton">
+    <a href="index.html" class="btnarrow4">Home</a>
+  </header>
+
+<footer>
+  <p>GallerySite / Icons by <a href="https://tobiasahlin.com/spinkit/">spinkit.com</a></p>
+</footer>
+
+</body>
+

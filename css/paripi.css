@@ -28,6 +28,7 @@ header {
   text-decoration: none;
   color: #eb593c;
   font-size: 15px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .gnavi li{
@@ -42,6 +43,7 @@ header {
 .gnavi li a{
   /*円の基点とするためrelativeを指定*/
 position: relative;
+font-family: 'Roboto Condensed', sans-serif;
 }
 
 .gnavi li.current a,
@@ -61,6 +63,7 @@ color:#eb593c;
   transition: all .3s;
   transform: scale(0.04, 1);
   transform-origin:center bottom;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /*現在地とhoverの設定*/
@@ -80,10 +83,24 @@ footer {
   color: #333333;
 }
 
+footer p,
+footer a {
+  color: #33333333;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+footer a:hover {
+  color: #eb593c;
+}
+
 main {
 padding:10px 0 0 0;
 text-align: center;
 background-color: #fffcec;
+}
+
+.topbotton a {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /*矢印が右に移動する*/
@@ -154,10 +171,11 @@ background-color: #fffcec;
   margin: 5% 0 0;
 }
 
-h1 {
+#caption {
   font-size: 3rem;
-  margin-top: 25%;
+  margin-top: 22%;
   color: #333333;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 .original img {
@@ -205,7 +223,8 @@ list-style:none;
 	cursor: pointer;
 	outline: none;
 	width:25%!important;
-list-style:none;
+  list-style:none;
+  margin-top: 5%;
 }
 
 .choice-btn li img{

@@ -1,0 +1,350 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/*ローディング画面*/
+/*ローディング画面*/
+#loading {
+  transition: all 3s; /*ローディングにかかる時間*/
+  background-color: #abdcd6;
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+}
+
+
+.spinner {
+  margin: 120px auto 0;
+  width: 100px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 25px;
+  height: 25px;
+  background-color: #333333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.gnavi{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 10px;
+  list-style: none;
+}
+
+header {
+  background-color: #fffcec;
+}
+
+.gnavi li a{
+  display: block;
+  padding:15px 20px;
+  text-decoration: none;
+  color: #eb593c;
+  font-size: 15px;
+}
+
+.gnavi li{
+  margin-bottom:20px;
+}
+
+/*==================================================
+　5-3-8 円が線に変化
+===================================*/
+
+
+.gnavi li a{
+  /*円の基点とするためrelativeを指定*/
+  position: relative;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.gnavi li.current a,
+.gnavi li a:hover{
+  color:#eb593c;
+}
+
+.gnavi li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-radius: 50%;
+  background:#eb593c;
+  transition: all .3s;
+  transform: scale(0.04, 1);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+  height: 1px;/*縦幅を変化*/
+  border-radius: 0;/*丸みをなくす*/    
+  transform: scale(0.8, 1);/*X方向0.8、Y方向1にスケール拡大*/
+}
+
+
+/*フォーム*/
+
+.formscontact {
+  background-color: #fffcec;
+  padding: 13% 0;
+}
+
+div.forms{
+  max-width:600px;
+  max-height: 700px;
+  margin:0 auto;
+  text-align:center;
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  border-radius:30px;
+}
+
+
+  div.forms h2 {
+    text-align:center;
+    padding:18px 0 18px 0;
+    font-size: 4rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 3px;
+    color:#33333333;
+  }
+
+  input {
+    margin-bottom:15px;
+  }
+
+  textarea {
+    height:100px;
+    margin-bottom:10px;
+  }
+
+  input:first-of-type
+{
+  margin-top:35px;
+}
+
+input, textarea {
+    font-size: 1em;
+    padding: 15px 100px 15px 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    border: 1px solid #cecece;
+    background: #fff;
+    color:#000;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 600px;
+}
+
+::-webkit-input-placeholder {
+    color: #A0A0A0;
+ }
+ :-moz-placeholder {
+    color: #FAFAFA;  
+ }
+ ::-moz-placeholder {
+    color: #FAFAFA; 
+ }
+ :-ms-input-placeholder {  
+    color: #FAFAFA;  
+ }
+
+ button {
+    margin-top:15px;
+    margin-bottom:25px;
+    background-color:#abdcd6;
+    padding: 12px 45px;
+    border: 1px solid #abdcd6;
+    -webkit-transition: .5s;
+    transition: .5s;
+    display: inline-block;
+    cursor: pointer;
+    width:30%;
+    color:#fff;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  button:hover, .button:hover {
+    background:#15b2b4;
+  }
+
+  label.error {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size:1em;
+      display:block;
+      padding-top:10px;
+      padding-bottom:10px;
+      background-color:#d89c9c;
+      width: 80%;
+      margin:auto;
+      color: #FAFAFA;
+  }
+/* media queries */
+@media (max-width: 700px) {
+  label.error {
+    width: 90%;
+  }
+  input, textarea {
+    width: 90%;
+  }
+  button {
+    width:90%;
+  }
+  body {
+  padding-top:10px;
+  }  
+}
+.message {
+    font-family:'Source Sans Pro',arial,sans-serif;
+    font-size:1.1em;
+    display:none;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color:#abdcd6;
+    width: 80%;
+    margin:auto;
+    color: #FAFAFA;
+}
+
+.topbotton {
+  background: #fffcec;
+}
+
+.topbotton a {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.btnarrow4{
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  color: #eb593c;
+  text-decoration: none;
+  outline: none;
+  margin: 15% 0 0 80%;
+  font-size: 1.5rem;
+}
+
+/*矢印と下線の形状*/
+.btnarrow4::before{
+  content: '';
+  position: absolute;
+  bottom:-8px;
+  left:15%;
+  width: 85%;
+  height: 1px;
+  background:#eb593c;
+  transition: all .3s;
+}
+
+.btnarrow4::after{
+  content: '';
+  position: absolute;
+  bottom:-3px;
+  right:0;
+  width: 15px;
+  height:1px;
+  background:#eb593c;
+  transform: rotate(35deg);
+  transition: all .3s;
+}
+
+/*hoverした際の移動*/
+.btnarrow4:hover::before{
+  left:20%;
+}
+
+.btnarrow4:hover::after{
+  right:-5%;
+}
+
+footer {
+  text-align: center;
+  background: #fffcec;
+  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #333333;
+}
+
+footer p,
+footer a {
+  color: #33333333;
+}
+
+footer a:hover {
+  color: #eb593c;
+}

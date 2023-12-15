@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,200;1,200&family=Ultra&family=Zen+Kaku+Gothic+New:wght@300&display=swap" rel="stylesheet">
+
   <title>Photo Gallery</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" href="css/paripi.css">
@@ -29,41 +31,42 @@
     <header>
       <ul class="gnavi">
         <li><a href="index.html">Home</a></li>
-        <li class="current"><a href="#">Gallery</a></li><!--現在地にはcurrentクラスを付ける-->
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </header>
 
   <main>
     <div id="gallery1">
-          <div class="img-item"><img src="images/paripi00.jpg" alt="img01"  class="thumb" data-image="images/img01.png"></div>
-          <div class="img-item"><img src="images/paripi01.jpg" alt="img02"  class="thumb" data-image="images/img02.png"></div>
-          <div class="img-item"><img src="images/paripi02.jpg" alt="img03"  class="thumb" data-image="images/img03.png"></div>
-          <div class="img-item"><img src="images/paripi03.jpg" alt="img04"  class="thumb" data-image="images/img04.png"></div>
-          <div class="img-item"><img src="images/paripi04.jpg" alt="img05"  class="thumb" data-image="images/img05.png"></div>
-          <div class="img-item"><img src="images/paripi05.jpg" alt="img06"  class="thumb" data-image="images/img06.png"></div>
-          <div class="img-item"><img src="images/paripi06.jpg" alt="img07"  class="thumb" data-image="images/img07.png"></div>
-          <div class="img-item"><img src="images/paripi07.jpg" alt="img08"  class="thumb" data-image="images/img08.png"></div>
-          <div class="img-item"><img src="images/paripi08.jpg" alt="img09"  class="thumb" data-image="images/img09.png"></div>
-          <div class="img-item"><img src="images/paripi09.jpg" alt="img10"  class="thumb" data-image="images/img10.png"></div>
-          <div class="img-item"><img src="images/paripi10.jpg" alt="img11"  class="thumb" data-image="images/img11.png"></div>
-          <div class="img-item"><img src="images/paripi11.jpg" alt="img12"  class="thumb" data-image="images/img12.png"></div>
+          <div class="img-item"><img src="images/paripi00.jpg" alt="img01"  class="thumb" data-image="images/paripi00.jpg"></div>
+          <div class="img-item"><img src="images/paripi01.jpg" alt="img02"  class="thumb" data-image="images/paripi01.jpg"></div>
+          <div class="img-item"><img src="images/paripi02.jpg" alt="img03"  class="thumb" data-image="images/paripi02.jpg"></div>
+          <div class="img-item"><img src="images/paripi03.jpg" alt="img04"  class="thumb" data-image="images/paripi03.jpg"></div>
+          <div class="img-item"><img src="images/paripi04.jpg" alt="img05"  class="thumb" data-image="images/paripi04.jpg"></div>
+          <div class="img-item"><img src="images/paripi05.jpg" alt="img06"  class="thumb" data-image="images/paripi05.jpg"></div>
+          <div class="img-item"><img src="images/paripi06.jpg" alt="img07"  class="thumb" data-image="images/paripi06.jpg"></div>
+          <div class="img-item"><img src="images/paripi07.jpg" alt="img08"  class="thumb" data-image="images/paripi07.jpg"></div>
+          <div class="img-item"><img src="images/paripi08.jpg" alt="img09"  class="thumb" data-image="images/paripi08.jpg"></div>
+          <div class="img-item"><img src="images/paripi09.jpg" alt="img10"  class="thumb" data-image="images/paripi09.jpg"></div>
+          <div class="img-item"><img src="images/paripi10.jpg" alt="img11"  class="thumb" data-image="images/paripi10.jpg"></div>
+          <div class="img-item"><img src="images/paripi11.jpg" alt="img12"  class="thumb" data-image="images/paripi11.jpg"></div>
         </ul>
     </div>
 
-    <h1>TITELE</h1>
+    <p id="caption">パリピ</p>
     
     <div class="original">
     <ul class="gallery">
-      <li><img src="images/paripi.jpg" alt=""></li>
-      <li><img src="images/omu.png" alt=""></li>
-      <li><img src="images/peta.PNG" alt=""></li>
+        <li><img src="images/paripi.jpg" alt="パリピ" class="thumb" title="パリピ"></li>
+        <li><img src="images/omu.png" alt="オムライス" class="thumb" title="オムライス"></li>
+        <li><img src="images/peta.PNG" alt="ペタッ" class="thumb" title="ペタッ"></li>
+        <li><img src="images/kemuri.png" alt="煙" class="thumb" title="煙"></li>
       </ul>
       <ul class="choice-btn">
-        <li><img src="images/paripi.jpg" alt=""></li>
-        <li><img src="images/omu.png" alt=""></li>
-        <li><img src="images/peta.PNG" alt=""></li>
+        <li><img src="images/paripi.jpg" alt="パリピ" class="thumb" title="パリピ"></li>
+        <li><img src="images/omu.png" alt="オムライス" class="thumb" title="オムライス"></li>
+        <li><img src="images/peta.PNG" alt="ペタッ" class="thumb" title="ペタッ"></li>
+        <li><img src="images/kemuri.png" alt="煙" class="thumb" title="煙"></li>
     </ul>
   </div>
 

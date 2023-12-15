@@ -85,6 +85,7 @@ h1 {
   text-decoration: none;
   color: #eb593c;
   font-size: 15px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .gnavi li{
@@ -104,6 +105,7 @@ position: relative;
 .gnavi li.current a,
 .gnavi li a:hover{
 color:#eb593c;
+font-family: 'Roboto Condensed', sans-serif;
 }
 
 .gnavi li a::after {
@@ -142,14 +144,15 @@ color:#eb593c;
 .scrolldown2 span{
 	position: absolute;
 	left:10px;
-	bottom:20px;
+	bottom:25px;
 	color: #333333;
 	font-size: 0.7rem;
 	letter-spacing: 0.05em;
 	/*縦書き設定*/
 	-ms-writing-mode: tb-rl;
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* 丸の描写 */
@@ -203,6 +206,15 @@ footer {
     color: #333333;
 }
 
+footer p,
+footer a {
+  color: #33333333;
+}
+
+footer a:hover {
+  color: #eb593c;
+}
+
 main {
   position: relative;
   z-index:1;
@@ -239,8 +251,9 @@ main::before {
 
 #original p {
   text-decoration: none;
-  margin: 2% 0;
+  margin: 5% 0;
   color: #333333;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 #original a {
