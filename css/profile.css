@@ -25,7 +25,6 @@ body {
   flex-direction: column; 
 }
 
-
 .spinner {
   margin: 120px auto 0;
   width: 100px;
@@ -86,6 +85,12 @@ body {
 .loaded {
   opacity: 0;
   visibility: hidden;
+}
+
+main{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #fffcec;
 }
 
 .gnavi{
@@ -169,6 +174,25 @@ header {
     height: auto;
     margin-left: 15%;
     margin-top: 10%;
+    animation: kaoimg 4s infinite;
+}
+@keyframes kaoimg {
+  0%, 40% {
+    transform: skew(0deg, 0deg);}
+  5% {
+    transform: skew(5deg, 5deg);}
+  10% {
+    transform: skew(-4deg, -4deg);}
+  15% {
+    transform: skew(3deg, 3deg);}
+  20% {
+    transform: skew(-2deg, -2deg);}
+  25% {
+    transform: skew(1deg, 1deg);}
+  30% {
+    transform: skew(-0.6deg, -0.6deg);}
+  35% {
+    transform: skew(0.3deg, 0.3deg);}
 }
 
 .kao::after{
@@ -178,19 +202,88 @@ header {
     font-family: 'Ultra', serif;
     letter-spacing: 2px;
     font-size: 2.5rem;
-    top: 20%;
+    top: 30%;
     left: 70%;
+    animation: kaoimg 4s infinite;
 } 
-
-.from {
-    margin-bottom: 10%;
-}
 
 .from p {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     color: #333333;
-    margin-bottom: 5%;
+    padding-bottom: 5%;
     line-height: 30px;
+}
+
+.sns {
+  display: flex;
+  background-color: #fffcec;
+  padding-left: 62%;
+  gap: 5%;
+}
+
+.sns img {
+  width: 4.5%;
+  height: auto;
+}
+
+.software {
+  display: flex;
+  align-items: center;
+  gap: 1.5%;
+  padding-top: 20%;
+  justify-content: center;
+}
+
+.software h2 {
+  color: #333333;
+  letter-spacing: 5px;
+}
+
+.software p {
+  background-color: #333333;
+  width: 70px;
+  height: 20px;
+  color: #fffcec;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+  gap: 10%;
+}
+
+.icon img {
+  width: 200px;
+  height: auto;
+}
+
+.pro {
+  text-align: center;
+  flex-basis: 200px;
+}
+
+.pro p {
+  text-align: left;
+  margin: 0 25%;
+  color: #333333;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+}
+
+.clip {
+  text-align: center;
+  flex-basis: 200px;
+}
+
+.clip p {
+  text-align: left;
+  margin: 0 25%;
+  color: #333333;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
 }
 
 .topbotton {
@@ -262,4 +355,111 @@ header {
   footer a:hover {
     color: #eb593c;
   }
+
+  @media screen and (max-width:1000px){
+    .text {
+      display: block;
+    }
+
+    .kao {
+      margin: 0 10%;
+    }
+
+    .kao::after{
+      font-size: 1.7rem;
+    }
+
+    .from p {
+      padding-top: 2%;
+      margin: 0 30%;
+      padding-bottom: 0;
+    }
+
+    .software h2 {
+      font-size: 18px;
+    }
+
+    .sns {
+      padding-top: 3%;
+      padding-left: 30%;
+      gap: 5%;
+    }
+
+    .sns img {
+      width: 3.2%;
+      height: auto;
+    }
+
+    .icon {
+      gap: 7%;
+    }
+
+    .icon img {
+      width: 120px;
+      height: auto;
+    }
+
+    .pro {
+      flex-basis: 120px;
+    }
+
+    .pro p {
+      font-size: 16px;
+    }
+
+    .clip {
+      flex-basis: 120px;
+    }
+
+    .clip p {
+      font-size: 16px;
+    }
+}
+
+@media screen and (max-width:460px){
+   .btnarrow4 {
+    margin: 15% 0 0 60%;
+    }
+
+    .kao {
+      margin-left: 10%;
+    }
+
+    .kao::after{
+      font-size: 1.2rem;
+    }
+
+    .from p {
+      padding-top: 2%;
+      font-size: 13px;
+      line-height: 25px;
+      padding-bottom: 2%;
+    }
+
+    .software h2 {
+      font-size: 14px;
+    }
+
+    .icon img {
+      width: 80px;
+  }
+
+  .pro {
+    flex-basis: 100px;
+  }
+
+  .pro p {
+    font-size: 13px;
+  }
+
+  .clip {
+    flex-basis: 100px;
+  }
+
+  .clip p {
+    font-size: 13px;
+  }
+
+
+}
   
